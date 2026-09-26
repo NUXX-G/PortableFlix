@@ -1,0 +1,4 @@
+# Datos de ejecución: nunca al repo (usuarios, tokens, base de datos)
+*/config/
+*/cache/
+.env

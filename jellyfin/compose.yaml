@@ -1,0 +1,18 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: "1000:1000"
+    ports:
+      - "127.0.0.1:8096:8096"
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - /srv/media/transcodes:/cache/transcodes
+      - /srv/media/test:/media/test:ro
+      # Día del NAS:
+      # - /mnt/nas/movies:/media/movies:ro
+      # - /mnt/nas/shows:/media/shows:ro
+    environment:
+      - TZ=Europe/Madrid
+    restart: unless-stopped
