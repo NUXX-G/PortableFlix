@@ -1,4 +1,4 @@
-# portablelab
+# PortableFlix
 
 Homelab on an old laptop running Ubuntu Server 24.04.
 
